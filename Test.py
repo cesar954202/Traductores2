@@ -1,4 +1,4 @@
-print "Bienvenido a mi traductor".center(70,"=")
+print "Bienvenido a mi traductor".center(80,"=")
 
 estados = [[00,01,02],
            [10,11,13],
@@ -19,6 +19,9 @@ while salida !=0:
     pos2 = int(input("Imprimir pos2: "))
     aux = estados[pos][pos2]
     print aux
+
+    for caracter in contenido:
+        print caracter
     
     salida = int(input("Desea salir presione 0: "))
 

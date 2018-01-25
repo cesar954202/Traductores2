@@ -1,4 +1,4 @@
-print "Bienvenido a mi traductor".center(70,"=")
+print "Bienvenido a mi traductor".center(80,"=")
 
 estados = [[00,01,02],
            [10,11,13],
@@ -13,12 +13,6 @@ while salida !=0:
     archivo = open(entrada, "r")
     contenido = archivo.read()
     print contenido
-
-
-    pos = int(input("Imprimir pos: "))
-    pos2 = int(input("Imprimir pos2: "))
-    aux = estados[pos][pos2]
-    print aux
     
     salida = int(input("Desea salir presione 0: "))
 
