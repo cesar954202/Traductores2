@@ -15,11 +15,11 @@ while salida !=0:
     print contenido
 
     #Pruebas de impresion de posision
-    #pos = int(input("Imprimir pos: "))
-    #pos2 = int(input("Imprimir pos2: "))
+    pos = int(input("Imprimir pos: "))
+    pos2 = int(input("Imprimir pos2: "))
     
-    #aux = estados[pos][pos2]
-    #print aux
+    aux = estados[pos][pos2]
+    print aux
 
     for caracter in contenido:
         print caracter
@@ -28,7 +28,8 @@ while salida !=0:
         else:
             if 'a' <= caracter <= 'z':
                 print "Es un caracter de la a-z"
-                #Validar no sea una palabra reservada                
+                #Validar no sea una palabra reservada
+                
             else:
                 if caracter.isspace():
                     print "Es un espacio"
