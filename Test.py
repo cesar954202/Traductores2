@@ -1,9 +1,11 @@
 print "Bienvenido a mi traductor".center(80,"=")
 
-estados = [[00,01,02],
+estados = [[0,1,2],
            [10,11,13],
            [20,21,22]
            ]
+estado = 0
+entrada = 0
 
 salida = 1
 while salida !=0:
@@ -15,67 +17,55 @@ while salida !=0:
     print contenido
 
     #Pruebas de impresion de posision
-    pos = int(input("Imprimir pos: "))
-    pos2 = int(input("Imprimir pos2: "))
+#    pos = int(input("Imprimir pos: "))
+#    pos2 = int(input("Imprimir pos2: "))
     
-    aux = estados[pos][pos2]
-    print aux
+#    aux = estados[pos][pos2]
+    print estado
 
     for caracter in contenido:
         print caracter
         if caracter.isdigit():
-            print "Es numero"
+            print "Es numero in=0"
+        elif 'a' <= caracter <= 'z':
+            print "Es un caracter de la a-z"
+            #Validar no sea una palabra reservada
+            if(caracter == 'i'):
+            elif(caracter == 'w'):
+            elif(caracter == 'r'):
+            elif(caracter == 'e'):
+        elif caracter.isspace():
+            print "Es un espacio"
+        elif 'A' <= caracter <= 'Z':
+            print "Es una mayuscula"
+        elif (caracter == '+' or caracter == '-'):
+            print "Es un operador de adicion"
+        elif (caracter == '*' or caracter == '/'):
+            print "Es operador de multiplicacion"
+        elif (caracter == '<' or caracter == '>'):
+            print "Es un operador relacional"
+        elif (caracter == '='):
+            print "asignacion"
+        elif (caracter == '!'):
+            print "Operador relacional !"
+        elif (caracter == '&'):
+            print "Es un operador and"
+        elif (caracter == '|'):
+            print "Es un operador OR"
+        elif (caracter == '(' or caracter == ')'):
+            print "Parentesis"
+        elif (caracter == '{' or caracter == '}'):
+            print "Llaves"
+        elif (caracter == ';'):
+            print "Punto y coma"
+        elif (caracter == '.'):
+            print "Es un punto"
+        elif(caracter == ','):
+	    print "Coma"
         else:
-            if 'a' <= caracter <= 'z':
-                print "Es un caracter de la a-z"
-                #Validar no sea una palabra reservada
-                
-            else:
-                if caracter.isspace():
-                    print "Es un espacio"
-                else:
-                    if 'A' <= caracter <= 'Z':
-                        print "Es una mayuscula"
-                    else:
-                        if (caracter == '+' or caracter == '-'):
-                            print "Es un operador de adicion"
-                        else:
-                            if (caracter == '*' or caracter == '/'):
-                                print "Es operador de multiplicacion"
-                            else:
-                                if (caracter == '<' or caracter == '>'):
-                                    print "Es un operador relacional"
-                                else:
-                                    if (caracter == '='):
-                                        print "asignacion"
-                                    else:
-                                        if (caracter == '!'):
-                                            print "Operador relacional !"
-                                        else:
-                                            if (caracter == '&'):
-                                                print "Es un operador and"
-                                            else:
-                                                if (caracter == '|'):
-                                                    print "Es un operador OR"
-                                                else:
-                                                    if (caracter == '(' or caracter == ')'):
-                                                        print "Parentesis"
-                                                    else:
-                                                        if (caracter == '{' or caracter == '}'):
-                                                            print "Llaves"
-                                                        else:
-                                                            if (caracter == ';'):
-                                                                print "Punto y coma"
-                                                            else:
-                                                                if (caracter == '.'):
-                                                                    print "Es un punto"
-                                                                else:
-                                                                    print "Caracter Invalido"
+            print "Caracter Invalido"
                                         
                         
             
     
     salida = int(input("Desea salir presione 0: "))
-
-    
-
