@@ -21,51 +21,111 @@ while salida !=0:
 #    pos2 = int(input("Imprimir pos2: "))
     
 #    aux = estados[pos][pos2]
-    print estado
+#    print estado
 
-    for caracter in contenido:
-        print caracter
-        if caracter.isdigit():
-            print "Es numero in=0"
-        elif 'a' <= caracter <= 'z':
+    #for contenido[indice] in contenido:
+    indice = 0
+    while indice < len(contenido):
+        print contenido[indice]
+        if contenido[indice].isdigit():
+            print "Es numero"
+            entrada = 0
+        elif 'a' <= contenido[indice] <= 'z':
             print "Es un caracter de la a-z"
-            #Validar no sea una palabra reservada
-            if(caracter == 'i'):
-            elif(caracter == 'w'):
-            elif(caracter == 'r'):
-            elif(caracter == 'e'):
-        elif caracter.isspace():
+            #Validar no sea una palabra reservada if,while,return,else,int,float
+            if(contenido[indice] == 'i'):
+                print "Es una i"
+                entrada = 1
+            elif(contenido[indice] == 'f'):
+                print "Es una f"
+                entrada = 2
+            elif(contenido[indice] == 'w'):
+                print "Es una w"
+                entrada = 3
+            elif(contenido[indice] == 'h'):
+                print "Es una h"
+                entrada = 4
+            elif(contenido[indice] == 'l'):
+                print "Es una l"
+                entrada = 5
+            elif(contenido[indice] == 'e'):
+                print "Es una e"
+                entrada = 6
+            elif(contenido[indice] == 'r'):
+                print "Es una r"
+                entrada = 7
+            elif(contenido[indice] == 't'):
+                print "Es una t"
+                entrada = 8
+            elif(contenido[indice] == 'u'):
+                print "Es una u"
+                entrada = 9
+            elif(contenido[indice] == 'n'):
+                print "Es una n"
+                entrada = 10
+            elif(contenido[indice] == 'l'):
+                print "Es una l"
+                entrada = 11
+            elif(contenido[indice] == 's'):
+                print "Es una s"
+                entrada = 12
+            elif(contenido[indice] == 'o'):
+                print "Es una o"
+                entrada = 13
+            elif(contenido[indice] == 'a'):
+                print "Es una a"
+                entrada = 14
+            else:
+                print "Cualquier contenido[indice] de a-z"
+                entrada = 15
+        elif contenido[indice].isspace():
             print "Es un espacio"
-        elif 'A' <= caracter <= 'Z':
+            entrada = 16
+        elif 'A' <= contenido[indice] <= 'Z':
             print "Es una mayuscula"
-        elif (caracter == '+' or caracter == '-'):
+            entrada = 17
+        elif (contenido[indice] == '+' or contenido[indice] == '-'):
             print "Es un operador de adicion"
-        elif (caracter == '*' or caracter == '/'):
+            entrada = 18
+        elif (contenido[indice] == '*' or contenido[indice] == '/'):
             print "Es operador de multiplicacion"
-        elif (caracter == '<' or caracter == '>'):
+            entrada = 19
+        elif (contenido[indice] == '<' or contenido[indice] == '>'):
             print "Es un operador relacional"
-        elif (caracter == '='):
+            entrada = 20
+        elif (contenido[indice] == '='):
             print "asignacion"
-        elif (caracter == '!'):
-            print "Operador relacional !"
-        elif (caracter == '&'):
+            entrada = 21
+        elif (contenido[indice] == '!'):
+            print "Operador relacional opNot"
+            entrada = 22
+        elif (contenido[indice] == '&'):
             print "Es un operador and"
-        elif (caracter == '|'):
+            entrada = 23
+        elif (contenido[indice] == '|'):
             print "Es un operador OR"
-        elif (caracter == '(' or caracter == ')'):
+            entrada = 24
+        elif (contenido[indice] == '(' or contenido[indice] == ')'):
             print "Parentesis"
-        elif (caracter == '{' or caracter == '}'):
+            entrada = 25
+        elif (contenido[indice] == '{' or contenido[indice] == '}'):
             print "Llaves"
-        elif (caracter == ';'):
+            entrada = 26
+        elif (contenido[indice] == ';'):
             print "Punto y coma"
-        elif (caracter == '.'):
+            entrada = 27
+        elif (contenido[indice] == '.'):
             print "Es un punto"
-        elif(caracter == ','):
+            entrada = 28
+        elif(contenido[indice] == ','):
 	    print "Coma"
-        else:
-            print "Caracter Invalido"
-                                        
-                        
+	    entrada = 29
+	else:
+            print "contenido[indice] Invalido"
+            entrada = 30
             
-    
+        print "Entrada : ", entrada
+        print " "
+        indice += 1
+        print "Indice es " , indice , "largo" , len(contenido)
     salida = int(input("Desea salir presione 0: "))

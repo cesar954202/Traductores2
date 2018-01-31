@@ -1,1 +1,5 @@
-a c 112.212 1111 while for "wqw ehdfsfh1234325834r ep()^`{}<>:_==  +-*/ 	AZZZZZZZSKJDSJFJKDSFKJDSKJFHDSJF
+a c 112.212 1111 while if else int "wqw ehd ep()^`{}<>:_==  +-*
+1
+2
+3
+  / SFKJD
