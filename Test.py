@@ -1,9 +1,10 @@
 print "Bienvenido a mi traductor".center(80,"=")
 
-estados = [[0,1,2],
+test = [[0,1,2],
            [10,11,13],
            [20,21,22]
            ]
+
 estado = 0
 entrada = 0
 
