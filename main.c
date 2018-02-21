@@ -1,10 +1,13 @@
-a c 112.212 1111 while if else int wqw ehd ep(){}<>==  +-*
-1
-2
-3
-  / SFKJD
+1 a c 112.212 1111 (){}.;;*-////// while if else return == = != < > 1a whi el reti 
+Estado1 = 1;
+void main()
+{
 
- return
+	2.2
+	///
+	*
+	-
+	+
+	-
 
- 1misjd
- = + == 0
+}

@@ -47,7 +47,7 @@ estados = [[1,4,40,6,40,40,17,11,40,40,40,40,40,40,40,40,0,40,23,24,25,33,31,29,
 [1,4,40,6,40,40,17,11,40,40,40,40,40,40,40,40,0,40,23,24,25,33,31,29,27,36,37,34,39,35,38],
 [1,4,40,6,40,40,17,11,40,40,40,40,40,40,40,40,0,40,23,24,25,33,31,29,27,36,37,34,39,35,38],
 [38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38],
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+[1,4,40,6,40,40,17,11,40,40,40,40,40,40,40,40,0,40,23,24,25,33,31,29,27,36,37,34,39,35,38],
 [40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,0,40,23,24,25,33,31,29,27,36,37,34,39,35,38]
 ]
 
@@ -70,9 +70,9 @@ while salida !=0:
 
     indice = 0
     while indice < len(contenido):
-        print "Se recibe",contenido[indice]
+        #print "Se recibe",contenido[indice]
         if contenido[indice].isdigit():
-            print "Es numero"
+            #print "Es numero"
             entrada = 0
         elif 'a' <= contenido[indice] <= 'z':
             #print "Es un caracter de la a-z"
@@ -170,13 +170,15 @@ while salida !=0:
             
         #print "Entrada : ", entrada
 
-        datToken = datToken + contenido[indice]
+        
         
         nuevoEstado = estados[estado][entrada]
         #print "Nuevo Estado : ", nuevoEstado
         #print " "
 
         #       agregar tipo de token y valor
+
+
 
         if (estado == 0) and (entrada == 16):
             datToken = ""
@@ -324,17 +326,26 @@ while salida !=0:
             aux = token(datToken, 7)
             tokens.append(aux)
             datToken = ""
-        elif (estado == 40):
+        elif (estado == 39):
+            aux = token(datToken, 22)
+            tokens.append(aux)
+            datToken = ""
+        elif (estado == 40) and (entrada == 16 or entrada > 17):
             aux = token(datToken, 5)
             tokens.append(aux)
             datToken = ""
 
         #####Terminana if else para guardar tokens
 
+        datToken = datToken + contenido[indice]
+
+        if(entrada==16):
+            datToken=""
+
         estado  = nuevoEstado
         indice += 1
-        print "Se pasa a EStado: ",estado
-        print "Contenido token: ", datToken
+    #    print "Se pasa a Estado: ",estado
+    #    print "Contenido token: ", datToken
 
 
     for i in tokens:
@@ -343,3 +354,7 @@ while salida !=0:
 
     salida = int(input("Desea salir presione 0: "))
     estado = 0
+    nuevoEstado = 0
+    entrada = 0
+    del tokens[:]
+    datToken = ""
