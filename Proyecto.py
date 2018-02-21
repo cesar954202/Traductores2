@@ -173,19 +173,17 @@ while salida !=0:
         datToken = datToken + contenido[indice]
         
         nuevoEstado = estados[estado][entrada]
-        print "Nuevo Estado : ", nuevoEstado
-        print " "
+        #print "Nuevo Estado : ", nuevoEstado
+        #print " "
 
-        #if(estado == 1):
-        #   if(entrada != 0 and entrada != 28)
         #       agregar tipo de token y valor
 
         if (estado == 0) and (entrada == 0):
                               dataToken = ""
-        elif (estado == 1) and (0 < entrada < 27 or entrada > 28):
-                              aux = token(datToken, 9)
-                              tokens.append(aux)
-                              dataToken = ""
+        elif (estado == 1) and (0 < entrada < 28 or entrada > 28):
+            aux = token(datToken, 9)
+            tokens.append(aux)
+            dataToken = ""
         elif (estado == 2) and (entrada < 0):
             aux = token(datToken, 7)
             tokens.append(aux)
@@ -194,13 +192,151 @@ while salida !=0:
             aux = token(datToken, 3)
             tokens.append(aux)
             dataToken = ""
-        elif (estado == 4) and (entrada < 16 or ):
-        
-        
+        elif (estado == 4) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 5) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 6)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 6) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 7) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 8) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 9) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 10) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 21)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 11) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 12) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 13) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 14) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 15) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 16) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 20)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 17) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 18) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 19) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 20) and (entrada == 16 or entrada > 17):
+            aux = token(datToken, 4)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 23):
+            aux = token(datToken, 10)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 24):
+            aux = token(datToken, 15)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 25) and (20 != entrada != 21):
+            aux = token(datToken, 12)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 26):
+            aux = token(datToken, 13)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 27):
+            aux = token(datToken, 7)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 28):
+            aux = token(datToken, 17)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 29):
+            aux = token(datToken, 7)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 30):
+            aux = token(datToken, 11)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 31) and (entrada != 21):
+            aux = token(datToken, 16)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 32):
+            aux = token(datToken, 14)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 33) and (entrada != 21):
+            aux = token(datToken, 1)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 34):
+            aux = token(datToken, 19)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 35):
+            aux = token(datToken, 2)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 36):
+            aux = token(datToken, 18)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 37):
+            aux = token(datToken, 8)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 38):
+            aux = token(datToken, 7)
+            tokens.append(aux)
+            dataToken = ""
+        elif (estado == 40):
+            aux = token(datToken, 5)
+            tokens.append(aux)
+            dataToken = ""
+
         #####Terminana if else para guardar tokens
 
         estado  = nuevoEstado
         indice += 1
+
+
+    for i in tokens:
+        i.mostrar()
 
 
     salida = int(input("Desea salir presione 0: "))

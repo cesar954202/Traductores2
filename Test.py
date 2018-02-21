@@ -25,9 +25,9 @@ for pos in tokens:
     #aux.dato += 1
     #tokens.append(aux)
     
-entrada = 29
-estado = 2
-if (estado == 2) and (0 < entrada < 27 or entrada > 28):
+entrada = 20
+estado = 25
+if (estado == 25) and (20 != entrada != 21):
     print "Si se valido"
 
 
