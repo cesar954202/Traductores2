@@ -25,10 +25,15 @@ for pos in tokens:
     #aux.dato += 1
     #tokens.append(aux)
     
-entrada = 20
+entrada = 1
 estado = 25
+
+mensaje = "Error"
 if (estado == 25) and (20 != entrada != 21):
     print "Si se valido"
+    mensaje = ""
+
+print mensaje
 
 
 #test = [[0,1,2],
